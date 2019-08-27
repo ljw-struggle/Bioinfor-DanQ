@@ -13,6 +13,8 @@ from utils.plots import plot_loss_curve, plot_roc_curve, plot_pr_curve
 from utils.metrics import calculate_auroc, calculate_aupr
 from utils.utils import create_dirs, write2txt, write2csv
 
+
+
 np.random.seed(0)
 tf.random.set_seed(0)
 
@@ -21,8 +23,10 @@ def train():
     dataset_valid = get_valid_data(100)
 
     model = DanQ_JASPAR()
+    # We should build the model to initial the weights because we write a custom build function.
+    model.build(input_shape=(None, 1000, 4))
     loss_object = keras.losses.BinaryCrossentropy()
-    optimizer = keras.optimizers.RMSprop()
+    optimizer = keras.optimizers.Adam()
     trainer = Trainer(
         model=model,
         loss_object=loss_object,
@@ -45,8 +49,10 @@ def test():
     dataset_test = get_test_data(64)
 
     model = DanQ_JASPAR()
+    # We should build the model to initial the weights because we write a custom build function.
+    model.build(input_shape=(None, 1000, 4))
     loss_object = keras.losses.BinaryCrossentropy()
-    optimizer = keras.optimizers.RMSprop()
+    optimizer = keras.optimizers.Adam()
     trainer = Trainer(
         model=model,
         loss_object=loss_object,

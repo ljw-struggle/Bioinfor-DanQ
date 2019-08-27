@@ -5,7 +5,7 @@ from tensorflow import keras
 
 class DanQ_JASPAR(keras.Model):
     def __init__(self):
-        super(DanQ_JASPAR, self).__init__()
+        super(DanQ_JASPAR, self).__init__('DanQ_JASPAR')
         self.conv_1 = keras.layers.Conv1D(
             filters=1024,
             kernel_size=30,
@@ -48,7 +48,7 @@ class DanQ_JASPAR(keras.Model):
             activation='sigmoid')
 
     def build(self, input_shape):
-        self.conv_1.build(input_shape=input_shape)
+        super(DanQ_JASPAR, self).build(input_shape)
         self.set_weights_by_JASPAR()
 
     def call(self, inputs, training=None, mask=None, **kwargs):

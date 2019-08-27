@@ -6,7 +6,7 @@ import tensorflow as tf
 from tqdm import tqdm
 
 class Trainer(object):
-    def __init__(self, model, loss_object, optimizer, experiment_dir, patience=10, max_to_keep=5):
+    def __init__(self, model, loss_object, optimizer, experiment_dir, patience=5, max_to_keep=5):
         self.model = model
         self.loss_object = loss_object
         self.optimizer = optimizer
@@ -54,7 +54,6 @@ class Trainer(object):
             print("Initializing from scratch.")
 
         print('Begin to train the model.\n')
-
         dataset_train = iter(dataset_train) # Transform the infinite iterable object to a iterator.
         dataset_valid = dataset_valid
 
@@ -108,7 +107,7 @@ class Trainer(object):
             elif patience_temp == self.patience:
                 print('Validation dice has not improved in {} epochs. Stopped training.'
                       .format(self.patience), flush=True)
-                return None
+                return history
             else:
                 patience_temp += 1
 

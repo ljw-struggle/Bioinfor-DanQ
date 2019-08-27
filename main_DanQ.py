@@ -3,8 +3,8 @@ import argparse
 import numpy as np
 import tensorflow as tf
 
-from tensorflow import keras
 from tqdm import tqdm
+from tensorflow import keras
 
 from models.model_DanQ import DanQ
 from trainer import Trainer
@@ -22,7 +22,7 @@ def train():
 
     model = DanQ()
     loss_object = keras.losses.BinaryCrossentropy()
-    optimizer = keras.optimizers.RMSprop()
+    optimizer = keras.optimizers.Adam()
     trainer = Trainer(
         model=model,
         loss_object=loss_object,
@@ -47,7 +47,7 @@ def test():
 
     model = DanQ()
     loss_object = keras.losses.BinaryCrossentropy()
-    optimizer = keras.optimizers.RMSprop()
+    optimizer = keras.optimizers.Adam()
     trainer = Trainer(
         model=model,
         loss_object=loss_object,

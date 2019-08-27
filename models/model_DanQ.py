@@ -4,7 +4,7 @@ from tensorflow import keras
 
 class DanQ(keras.Model):
     def __init__(self):
-        super(DanQ, self).__init__()
+        super(DanQ, self).__init__('DanQ')
         self.conv_1 = keras.layers.Conv1D(
             filters=320,
             kernel_size=26,
