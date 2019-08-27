@@ -53,13 +53,9 @@ CUDA_VISIBLE_DEVICES=0 python main_DanQ.py -e test
 Yon can get the result in the **`./result/`** directory.
 
 ### Loss Curve
-For DanQ:
 
-![DanQ loss](./result/DanQ_JASPAR/model_loss.jpg)
-
-For DanQ-JASPAR:
-
-![DanQ-JASPAR loss](./result/DanQ_JASPAR/model_loss.jpg)
+![DanQ loss](./result/DanQ_JASPAR/model_loss.jpg 'DanQ Loss Curve')
+![DanQ-JASPAR loss](./result/DanQ_JASPAR/model_loss.jpg 'DanQ-JASPAR Loss Curve')
 
 ### Metric
 We use two metrics to evaluate the model. (AUROC, AUPR)
