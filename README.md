@@ -8,10 +8,10 @@ This is implemented by tensorflow-2.0 again.
 CNN + BidLSTM + Dense
 
 ### Loss Function
-Binary Cross Entropy.
+Binary Cross Entropy
 
 ### Optimization Method
-Adam.
+Adam
 
 
 ## USAGE
@@ -19,7 +19,7 @@ Adam.
 ### Requirement
 We run training on Ubuntu 18.04 LTS with a GTX 1080ti GPU.
 
-[Python](<https://www.python.org>) (3.7.3) | [Tensorflow](<https://tensorflow.google.cn/install>) (2.0.0beta1)
+[Python](<https://www.python.org>) (3.7.3) | [Tensorflow](<https://tensorflow.google.cn/install>) (2.0.0)
 | [CUDA](<https://developer.nvidia.com/cuda-toolkit-archive>) (10.0) | [cuDNN](<https://developer.nvidia.com/cudnn>) (7.4.1)
 
 
@@ -53,9 +53,30 @@ CUDA_VISIBLE_DEVICES=0 python main_DanQ.py -e test
 Yon can get the result in the **`./result/`** directory.
 
 ### Loss Curve
+For DanQ:
+
+![DanQ loss](./result/DanQ_JASPAR/model_loss.jpg)
+
+For DanQ-JASPAR:
+
+![DanQ-JASPAR loss](./result/DanQ_JASPAR/model_loss.jpg)
 
 ### Metric
+We use two metrics to evaluate the model. (AUROC, AUPR)
 
+For DanQ:
+
+-|DNase|TFBinding|HistoneMark|All
+:-:|:-:|:-:|:-:|:-:
+AUROC|0.9124|0.9451|0.8395|0.9287
+AUPR|0.4323|0.3271|0.3508|0.3441
+
+For DanQ-JASPAR:
+
+-|DNase|TFBinding|HistoneMark|All
+:-:|:-:|:-:|:-:|:-:
+AUROC|0.9124|0.9451|0.8395|0.9287
+AUPR|0.4323|0.3271|0.3508|0.3441
 
 ## REFERENCE
 > [DanQ: a hybrid convolutional and recurrent deep neural network for quantifying the function of DNA sequences](<https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4914104/>) | [Github](<https://github.com/uci-cbcl/DanQ/>)
