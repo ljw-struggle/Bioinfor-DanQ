@@ -28,7 +28,7 @@ You need to first download the training, validation, and testing sets from DeepS
 contents of the tar.gz file, move the 3 .mat files into the data/ folder. 
 
 ### Model
-The model that trained by myself is available in BAIDU Net Disk [here](https://pan.baidu.com/s/1tfYvDoO6Xvt7v7y70nDsXg)
+The model that trained by myself is available in BAIDU Net Disk [here](https://pan.baidu.com/s/1LiUAaEy5IlFDecl4DWXrKw)
 
 ### Preprocess
 Because of my RAM limited, I firstly transform the train.mat file to .tfrecord files.
@@ -54,7 +54,7 @@ Yon can get the result in the **`./result/`** directory.
 ### Loss Curve
 For DanQ:
 
-![DanQ loss](./result/DanQ_JASPAR/model_loss.jpg 'DanQ Loss Curve')
+![DanQ loss](./result/DanQ/model_loss.jpg 'DanQ Loss Curve')
 
 For DanQ-JASPAR:
 
@@ -67,8 +67,8 @@ For DanQ:
 
 -|DNase|TFBinding|HistoneMark|All
 :-:|:-:|:-:|:-:|:-:
-AUROC|0.9124|0.9451|0.8395|0.9287
-AUPR|0.4323|0.3271|0.3508|0.3441
+AUROC|0.9022|0.9317|0.8303|0.9162
+AUPR|0.4072|0.2984|0.3373|0.3176
 
 For DanQ-JASPAR:
 
