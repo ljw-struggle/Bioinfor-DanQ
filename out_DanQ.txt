@@ -1,0 +1,134 @@
+2019-08-27 16:21:44.556590: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2019-08-27 16:21:44.586761: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.587738: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.62
+pciBusID: 0000:01:00.0
+2019-08-27 16:21:44.587803: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.588901: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.62
+pciBusID: 0000:03:00.0
+2019-08-27 16:21:44.589061: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2019-08-27 16:21:44.589908: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2019-08-27 16:21:44.590674: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2019-08-27 16:21:44.590867: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2019-08-27 16:21:44.591851: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-27 16:21:44.592614: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-27 16:21:44.594858: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2019-08-27 16:21:44.594981: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.596033: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.597102: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.598024: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.599052: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1
+2019-08-27 16:21:44.599326: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-08-27 16:21:44.623960: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3600000000 Hz
+2019-08-27 16:21:44.624366: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5618fbe88440 executing computations on platform Host. Devices:
+2019-08-27 16:21:44.624408: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2019-08-27 16:21:44.730141: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.737434: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.738220: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5618fbd9b9e0 executing computations on platform CUDA. Devices:
+2019-08-27 16:21:44.738244: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2019-08-27 16:21:44.738250: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (1): GeForce GTX 1080 Ti, Compute Capability 6.1
+2019-08-27 16:21:44.739261: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.739813: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.62
+pciBusID: 0000:01:00.0
+2019-08-27 16:21:44.739874: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.740489: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 1 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.62
+pciBusID: 0000:03:00.0
+2019-08-27 16:21:44.740520: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2019-08-27 16:21:44.740533: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2019-08-27 16:21:44.740545: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2019-08-27 16:21:44.740558: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2019-08-27 16:21:44.740569: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2019-08-27 16:21:44.740581: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2019-08-27 16:21:44.740593: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2019-08-27 16:21:44.740630: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.741198: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.741856: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.742459: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.743142: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0, 1
+2019-08-27 16:21:44.743181: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2019-08-27 16:21:44.744864: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-08-27 16:21:44.744878: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 1 
+2019-08-27 16:21:44.744884: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N Y 
+2019-08-27 16:21:44.744901: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 1:   Y N 
+2019-08-27 16:21:44.745406: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.745971: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.746658: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.747187: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10095 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-08-27 16:21:44.747470: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1006] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-08-27 16:21:44.748132: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 10479 MB memory) -> physical GPU (device: 1, name: GeForce GTX 1080 Ti, pci bus id: 0000:03:00.0, compute capability: 6.1)
+WARNING: Logging before flag parsing goes to stderr.
+W0827 16:21:45.257879 139839347672896 deprecation.py:323] From /home/lijiawei/anaconda3/lib/python3.7/site-packages/tensorflow_core/python/data/util/random_seed.py:58: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-08-27 16:21:45.812521: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2019-08-27 16:21:46.693611: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+Initializing from scratch.
+Begin to train the model.
+
+Epoch: 1 | Train Loss: 0.06709
+Epoch: 1 | Valid Loss: 0.05722
+Epoch: 1 | Cost time: 2451.41694: second
+Saved checkpoint for epoch 1: ./result/DanQ/checkpoint/ckpt-1
+Epoch: 2 | Train Loss: 0.06265
+Epoch: 2 | Valid Loss: 0.05590
+Epoch: 2 | Cost time: 2449.35485: second
+Saved checkpoint for epoch 2: ./result/DanQ/checkpoint/ckpt-2
+Epoch: 3 | Train Loss: 0.06113
+Epoch: 3 | Valid Loss: 0.05459
+Epoch: 3 | Cost time: 2443.23928: second
+Saved checkpoint for epoch 3: ./result/DanQ/checkpoint/ckpt-3
+Epoch: 4 | Train Loss: 0.06038
+Epoch: 4 | Valid Loss: 0.05459
+Epoch: 4 | Cost time: 2445.06164: second
+Epoch: 5 | Train Loss: 0.05992
+Epoch: 5 | Valid Loss: 0.05470
+Epoch: 5 | Cost time: 2443.25938: second
+Epoch: 6 | Train Loss: 0.05959
+Epoch: 6 | Valid Loss: 0.05410
+Epoch: 6 | Cost time: 2441.70660: second
+Saved checkpoint for epoch 6: ./result/DanQ/checkpoint/ckpt-6
+Epoch: 7 | Train Loss: 0.05931
+Epoch: 7 | Valid Loss: 0.05417
+Epoch: 7 | Cost time: 2459.69642: second
+Epoch: 8 | Train Loss: 0.05903
+Epoch: 8 | Valid Loss: 0.05492
+Epoch: 8 | Cost time: 2457.03859: second
+Epoch: 9 | Train Loss: 0.05875
+Epoch: 9 | Valid Loss: 0.05368
+Epoch: 9 | Cost time: 2436.24407: second
+Saved checkpoint for epoch 9: ./result/DanQ/checkpoint/ckpt-9
+Epoch: 10 | Train Loss: 0.05853
+Epoch: 10 | Valid Loss: 0.05403
+Epoch: 10 | Cost time: 2443.48346: second
+Epoch: 11 | Train Loss: 0.05835
+Epoch: 11 | Valid Loss: 0.05341
+Epoch: 11 | Cost time: 2418.97986: second
+Saved checkpoint for epoch 11: ./result/DanQ/checkpoint/ckpt-11
+Epoch: 12 | Train Loss: 0.05821
+Epoch: 12 | Valid Loss: 0.05330
+Epoch: 12 | Cost time: 2401.53142: second
+Saved checkpoint for epoch 12: ./result/DanQ/checkpoint/ckpt-12
+Epoch: 13 | Train Loss: 0.05807
+Epoch: 13 | Valid Loss: 0.05406
+Epoch: 13 | Cost time: 2438.14442: second
+Epoch: 14 | Train Loss: 0.05794
+Epoch: 14 | Valid Loss: 0.05407
+Epoch: 14 | Cost time: 2446.84936: second
+Epoch: 15 | Train Loss: 0.05783
+Epoch: 15 | Valid Loss: 0.05413
+Epoch: 15 | Cost time: 2446.76012: second
+Epoch: 16 | Train Loss: 0.05773
+Epoch: 16 | Valid Loss: 0.05347
+Epoch: 16 | Cost time: 2425.65136: second
+Epoch: 17 | Train Loss: 0.05764
+Epoch: 17 | Valid Loss: 0.05347
+Epoch: 17 | Cost time: 2406.15948: second
+Epoch: 18 | Train Loss: 0.05755
+Epoch: 18 | Valid Loss: 0.05391
+Epoch: 18 | Cost time: 2390.93016: second
+Validation dice has not improved in 5 epochs. Stopped training.
+
+ history dict:  {'epoch': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], 'train_loss': [0.067089, 0.06264718, 0.0611265, 0.06038407, 0.059921853, 0.059590936, 0.059310496, 0.059034023, 0.058748607, 0.058531865, 0.058349855, 0.058207788, 0.058066793, 0.057940297, 0.057831295, 0.057725754, 0.057638243, 0.057549093], 'valid_loss': [0.057221662, 0.055898752, 0.054587055, 0.054589853, 0.054696336, 0.054096263, 0.054165624, 0.054917827, 0.05368262, 0.054028023, 0.053414233, 0.053299014, 0.054064974, 0.05406705, 0.05412624, 0.053473633, 0.05346808, 0.053906035]}
