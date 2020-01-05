@@ -61,7 +61,9 @@ def test():
 
     result, label = trainer.test(dataset_test, test_steps=int(np.ceil(455024 / 64)), dis_show_bar=True)
 
+    result = np.mean((result[0:227512], result[227512:]), axis=0)
     result_shape = np.shape(result)
+    label = label[0:227512]
 
     fpr_list, tpr_list, auroc_list = [], [], []
     precision_list, recall_list, aupr_list = [], [], []
