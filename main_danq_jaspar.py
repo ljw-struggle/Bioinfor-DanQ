@@ -3,15 +3,15 @@ import argparse
 import numpy as np
 import tensorflow as tf
 
-from tqdm import tqdm
 from tensorflow import keras
+from tqdm import tqdm
 
-from models.model_DanQ import DanQ
+from model import DanQ_JASPAR
 from trainer import Trainer
 from loader import get_train_data, get_valid_data, get_test_data
-from utils.plots import plot_loss_curve, plot_roc_curve, plot_pr_curve
-from utils.metrics import calculate_auroc, calculate_aupr
-from utils.utils import create_dirs, write2txt, write2csv
+from utils import plot_loss_curve, plot_roc_curve, plot_pr_curve
+from utils import calculate_auroc, calculate_aupr
+from utils import create_dirs, write2txt, write2csv
 
 np.random.seed(0)
 tf.random.set_seed(0)
@@ -20,39 +20,42 @@ def train():
     dataset_train = get_train_data(100)
     dataset_valid = get_valid_data(100)
 
-    model = DanQ()
+    model = DanQ_JASPAR()
+    # We should build the model to initial the weights because we write a custom build function.
+    model.build(input_shape=(None, 1000, 4))
     loss_object = keras.losses.BinaryCrossentropy()
     optimizer = keras.optimizers.Adam()
     trainer = Trainer(
         model=model,
         loss_object=loss_object,
         optimizer=optimizer,
-        experiment_dir='./result/DanQ')
+        experiment_dir='./result/DanQ_JASPAR')
 
-    history = trainer.train(dataset_train, dataset_valid, epoch=60, train_steps=int(np.ceil(4400000 / 100)),
-                  valid_steps=int(np.ceil(8000 / 100)), dis_show_bar=True)
-
+    history = trainer.train(dataset_train, dataset_valid, epoch=32, train_steps=int(np.ceil(4400000 / 100)),
+                            valid_steps=int(np.ceil(8000 / 100)), dis_show_bar=True)
 
     # Plot the loss curve of training and validation, and save the loss value of training and validation.
     print('\n history dict: ', history)
     epoch = history['epoch']
     train_loss = history['train_loss']
     val_loss = history['valid_loss']
-    plot_loss_curve(epoch, train_loss, val_loss, './result/DanQ/model_loss.jpg')
-    np.savez('./result/DanQ/model_loss.npz', train_loss = train_loss, val_loss = val_loss)
+    plot_loss_curve(epoch, train_loss, val_loss, './result/DanQ_JASPAR/model_loss.jpg')
+    np.savez('./result/DanQ_JASPAR/model_loss.npz', train_loss=train_loss, val_loss=val_loss)
 
 
 def test():
     dataset_test = get_test_data(64)
 
-    model = DanQ()
+    model = DanQ_JASPAR()
+    # We should build the model to initial the weights because we write a custom build function.
+    model.build(input_shape=(None, 1000, 4))
     loss_object = keras.losses.BinaryCrossentropy()
     optimizer = keras.optimizers.Adam()
     trainer = Trainer(
         model=model,
         loss_object=loss_object,
         optimizer=optimizer,
-        experiment_dir='./result/DanQ')
+        experiment_dir='./result/DanQ_JASPAR')
 
     result, label = trainer.test(dataset_test, test_steps=int(np.ceil(455024 / 64)), dis_show_bar=True)
 
@@ -73,26 +76,26 @@ def test():
         auroc_list.append(auroc_temp)
         aupr_list.append(aupr_temp)
 
-    plot_roc_curve(fpr_list, tpr_list, './result/DanQ/')
-    plot_pr_curve(precision_list, recall_list, './result/DanQ/')
+    plot_roc_curve(fpr_list, tpr_list, './result/DanQ_JASPAR/')
+    plot_pr_curve(precision_list, recall_list, './result/DanQ_JASPAR/')
 
     header = np.array([['auroc', 'aupr']])
     content = np.stack((auroc_list, aupr_list), axis=1)
     content = np.concatenate((header, content), axis=0)
-    write2csv(content, './result/DanQ/result.csv')
-    write2txt(content, './result/DanQ/result.txt')
+    write2csv(content, './result/DanQ_JASPAR/result.csv')
+    write2txt(content, './result/DanQ_JASPAR/result.txt')
     avg_auroc = np.nanmean(auroc_list)
     avg_aupr = np.nanmean(aupr_list)
     print('AVG-AUROC:{:.3f}, AVG-AUPR:{:.3f}.\n'.format(avg_auroc, avg_aupr))
 
 if __name__ == '__main__':
     # Parses the command line arguments and returns as a simple namespace.
-    parser = argparse.ArgumentParser(description='main_DanQ.py')
+    parser = argparse.ArgumentParser(description='main.py')
     parser.add_argument('-e', '--exe_mode', default='train', help='The execution mode.')
     args = parser.parse_args()
 
     # Selecting the execution mode (keras).
-    create_dirs(['./result/DanQ/'])
+    create_dirs(['./result/DanQ_JASPAR/'])
     if args.exe_mode == 'train':
         train()
     elif args.exe_mode == 'test':
